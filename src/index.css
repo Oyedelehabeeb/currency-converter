@@ -1,13 +1,131 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* CurrencyConverter.css */
+.currency-converter-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.converter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.converter-title {
+  text-align: center;
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.amount-input:focus {
+  border-color: #4a90e2;
+}
+
+.currency-selectors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.currency-select {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  appearance: none;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.currency-select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.swap-icon {
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.result-section {
+  background-color: #e9f5ff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.conversion-result {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.error-container {
+  background-color: #ffebee;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error-message {
+  color: #d32f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.error-icon {
+  font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .currency-converter-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .currency-selectors {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
